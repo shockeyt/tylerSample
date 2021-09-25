@@ -1,0 +1,13 @@
+#shopify-section-announcement-bar{
+    p.announcement-bar__message{
+        font-family: $roboto_bold;
+        font-size: 11px;
+        letter-spacing: 1px;
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+        @include lg{
+            font-size: 14px;
+            padding: 1.6rem 2rem;
+        }
+    }
+}

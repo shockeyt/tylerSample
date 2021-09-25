@@ -1,0 +1,74 @@
+//typography
+@font-face {
+    font-family: 'roboto-bold';
+    src: url('../../assets/Roboto-Bold.woff2') format('woff2'),
+         url('../../assets/Roboto-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'roboto-medium';
+    src: url('../../assets/Roboto-Medium.woff2') format('woff2'),
+         url('../../assets/Roboto-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'roboto-regular';
+    src: url('../../assets/Roboto-Regular.woff2') format('woff2'),
+         url('../../assets/Roboto-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+$roboto_bold : "roboto-bold", sans-serif;
+$roboto_medium : "roboto-medium", sans-serif;
+$roboto_regular : "roboto-regular", sans-serif;
+
+.roboto-bold{
+    font-family: $roboto_bold;
+}
+.roboto-medium{
+    font-family: $roboto_medium;
+}
+.roboto-regular{
+    font-family: $roboto_regular;
+}
+
+h1{
+    font-family: $roboto_bold;
+    font-size: 80px;
+}
+h2{
+    font-family: $roboto_bold;
+    font-size: 60px;
+}
+h3{
+    font-family: $roboto_bold;
+    font-size: 42px;
+}
+h4{
+    font-family: $roboto_medium;
+    font-size: 28px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+h5{
+    font-family: $roboto_bold;
+    font-size: 20px;
+}
+h6{
+    font-family: $roboto_medium;
+    font-size: 18px;
+}
+p{
+    font-family: $roboto_regular;
+    font-size: 16px;
+    &.small{
+        font-size: 14px;
+    }
+}
+
+*{
+    font-family: $roboto_regular;
+}

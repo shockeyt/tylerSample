@@ -1,0 +1,8 @@
+development:
+  password: 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
+  theme_id: "126603034830"
+  store: tyler-sample.myshopify.com
+production:
+  password: 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
+  theme_id: "126548082894"
+  store: tyler-sample.myshopify.com
