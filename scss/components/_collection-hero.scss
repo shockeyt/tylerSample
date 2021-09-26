@@ -2,6 +2,7 @@
     height: 590px;
     @include md{
         height: 620px;
+        margin-bottom: 55px;
     }
     @include lg{
         height: 650px;

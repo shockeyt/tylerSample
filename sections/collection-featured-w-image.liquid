@@ -1,5 +1,22 @@
 <section id="section-{{ section.id }}" class="featured-collection-w-image position-relative" data-section-id="{{ section.id }}" data-section-type="collection">
-
+    <div class="bkgd-img" style="background-image:url({{ section.settings.bkgd_image | img_url: 'master' }});"></div>
+    <div class="text-box page-width">
+        <div class="box-holder position-relative">
+            <div class="inner-box">
+                {%- unless section.settings.title == blank -%}
+                    <h3 class="text-black">{{ section.settings.title }}</h3>
+                {%- endunless -%}
+                {%- unless section.settings.subheading == blank -%}
+                    <p class="text-black">{{ section.settings.subheading }}</p>
+                {%- endunless -%}
+                {%- unless section.settings.collection == blank -%}
+                    <div>
+                        <a href="/collections/{{ section.settings.collection }}" class="btn">{{ section.settings.collection_title }}</a>
+                    </div>
+                {%- endunless -%}
+            </div>
+        </div>
+    </div>
 </section>
 
 {% schema %}

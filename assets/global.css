@@ -57,7 +57,13 @@ h2 {
 
 h3 {
   font-family: "roboto-bold", sans-serif;
-  font-size: 42px;
+  font-size: 28px;
+}
+
+@media (min-width: 750px) {
+  h3 {
+    font-size: 42px;
+  }
 }
 
 h4 {
@@ -86,6 +92,7 @@ h6 {
 p {
   font-family: "roboto-regular", sans-serif;
   font-size: 16px;
+  line-height: 1.6;
 }
 
 p.small {
@@ -182,7 +189,7 @@ p.small {
     font-size: 14px;
     min-width: 150px;
     border: 1px solid #141414;
-    padding: 12px;
+    padding: 12px 20px;
   }
 
   .btn:hover {
@@ -213,6 +220,7 @@ p.small {
 @media (min-width: 750px) {
   .collection-hero {
     height: 620px;
+    margin-bottom: 55px;
   }
 }
 
@@ -328,6 +336,82 @@ p.small {
   left: 0;
   transform: translateY(-50%);
   width: 54%;
+}
+
+@media (min-width: 750px) {
+  .featured-collection-w-image {
+    height: 550px;
+  }
+}
+
+@media (min-width: 990px) {
+  .featured-collection-w-image {
+    height: 650px;
+  }
+}
+
+.featured-collection-w-image .bkgd-img {
+  display: block;
+  height: 225px;
+}
+
+@media (min-width: 750px) {
+  .featured-collection-w-image .bkgd-img {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+  }
+}
+
+@media (min-width: 990px) {
+  .featured-collection-w-image .bkgd-img {
+    width: 60%;
+  }
+}
+
+.featured-collection-w-image .text-box {
+  background: #fff;
+  margin-right: 10px;
+  margin-top: -60px;
+  padding: 20px;
+  text-align: left;
+}
+
+@media (min-width: 750px) {
+  .featured-collection-w-image .text-box {
+    position: absolute;
+    top: 135px;
+    left: 53px;
+  }
+}
+
+@media (min-width: 990px) {
+  .featured-collection-w-image .text-box {
+    margin: 0;
+    padding: 30px;
+    top: 100px;
+  }
+}
+
+.featured-collection-w-image .text-box .inner-box {
+  border: 1px solid #D8D8D8;
+  padding: 25px 20px 35px;
+}
+
+@media (min-width: 990px) {
+  .featured-collection-w-image .text-box .inner-box {
+    padding: 65px 82px;
+  }
+}
+
+.featured-collection-w-image .text-box .inner-box h3 {
+  margin: 0 0 10px;
+}
+
+.featured-collection-w-image .text-box .inner-box p {
+  margin: 0 0 25px;
 }
 
 .header.page-width {
