@@ -1,0 +1,91 @@
+<section id="section-{{ section.id }}" class="collection-hero position-relative" data-section-id="{{ section.id }}" data-section-type="collection">
+    <div class="bkgd-img mobile-bkgd" style="background-image:url({{ section.settings.mobile_image | img_url: '1000x' }});"></div>
+    <div class="bkgd-img desktop-bkgd" style="background-image:url({{ section.settings.desktop_image | img_url: 'master' }});"></div>
+    <div class="mobile-box">
+        {%- unless section.settings.tagline == blank -%}
+            <h6 class="cap text-black">{{ section.settings.tagline }}</h6>
+        {%- endunless -%}
+        {%- unless section.settings.title == blank -%}
+            <h1 class="cap line-1">{{ section.settings.title }}</h1>
+        {%- endunless -%}
+        <div class="collection-buttons">
+            {%- for block in section.blocks -%}
+                <a href="/collections/{{ block.settings.collection }}" class="btn">{{ block.settings.collection_title }}</a>
+            {%- endfor -%}
+        </div>
+    </div>
+    <div class="desktop-box page-width">
+        <div class="box-holder position-relative">
+            <div class="inner-box">
+                {%- unless section.settings.tagline == blank -%}
+                    <h6 class="cap text-black">{{ section.settings.tagline }}</h6>
+                {%- endunless -%}
+                {%- unless section.settings.title == blank -%}
+                    <h1 class="cap line-1">{{ section.settings.title }}</h1>
+                {%- endunless -%}
+                <div class="collection-buttons">
+                    {%- for block in section.blocks -%}
+                        <a href="/collections/{{ block.settings.collection }}" class="btn">{{ block.settings.collection_title }}</a>
+                    {%- endfor -%}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collections Hero",
+  "class": "shopify-section--collection-hero",
+  "settings": [
+    {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "Mobile Background Image"
+    },
+    {
+        "type": "image_picker",
+        "id": "desktop_image",
+        "label": "Desktop Background Image"
+    },  
+    {
+        "type": "text",
+        "id": "tagline",
+        "label": "Tagline",
+        "default": "Tagline"
+    },  
+    {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection Button",
+      "settings": [
+            {
+                "type": "text",
+                "id": "collection_title",
+                "label": "Collection title",
+                "default": "Collection title"
+            },
+            {
+                "type": "collection",
+                "id": "collection",
+                "label": "Collection"
+            }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Custom",
+      "name": "Collections Hero",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

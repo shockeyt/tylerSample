@@ -1,0 +1,47 @@
+<section id="section-{{ section.id }}" class="featured-collection-w-image position-relative" data-section-id="{{ section.id }}" data-section-type="collection">
+
+</section>
+
+{% schema %}
+{
+  "name": "Collection Image Banner",
+  "class": "shopify-section--featured-collection-w-image",
+  "settings": [
+    {
+        "type": "image_picker",
+        "id": "bkgd_image",
+        "label": "Background Image"
+    },   
+    {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Title"
+    },
+    {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading",
+        "default": "Subheading"
+    },
+    {
+        "type": "text",
+        "id": "collection_title",
+        "label": "Collection title",
+        "default": "Collection title"
+    },
+    {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Custom",
+      "name": "Collection Image Banner",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

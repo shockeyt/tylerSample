@@ -37,7 +37,10 @@ $roboto_regular : "roboto-regular", sans-serif;
 
 h1{
     font-family: $roboto_bold;
-    font-size: 80px;
+    font-size: 36px;
+    @include md{
+        font-size: 80px;
+    }
 }
 h2{
     font-family: $roboto_bold;
@@ -59,7 +62,10 @@ h5{
 }
 h6{
     font-family: $roboto_medium;
-    font-size: 18px;
+    font-size: 14px;
+    @include md{
+        font-size: 18px;
+    }
 }
 p{
     font-family: $roboto_regular;

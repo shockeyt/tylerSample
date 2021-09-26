@@ -1,0 +1,50 @@
+.d-inline{
+    display: inline !important;
+}
+.d-inline-block{
+    display: inline-block !important;
+}
+.d-block{
+    display: block !important;
+}
+.d-flex{
+    display: flex !important;
+}
+.text-center{
+    text-align: center;
+}
+.no-cap{
+	text-transform: none !important;
+}
+.cap{
+	text-transform: uppercase !important;
+}
+.bkgd-img{
+	background-size: cover !important;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+}
+.position-relative{
+    position: relative !important;
+}
+.justify-content-center{
+    justify-content: center !important;
+}
+.align-items-flex-start{
+    align-items: flex-start;
+}
+.align-items-unset{
+    align-items: unset;
+}
+.z-index-1{
+	z-index: 1 !important;
+}
+.line-1{
+	line-height: 1 !important;
+}
+.position-center{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}

@@ -1,3 +1,7 @@
+.text-black {
+  color: #141414;
+}
+
 .text-dark-gray {
   color: #4A4A4A;
 }
@@ -37,7 +41,13 @@
 
 h1 {
   font-family: "roboto-bold", sans-serif;
-  font-size: 80px;
+  font-size: 36px;
+}
+
+@media (min-width: 750px) {
+  h1 {
+    font-size: 80px;
+  }
 }
 
 h2 {
@@ -64,7 +74,13 @@ h5 {
 
 h6 {
   font-family: "roboto-medium", sans-serif;
-  font-size: 18px;
+  font-size: 14px;
+}
+
+@media (min-width: 750px) {
+  h6 {
+    font-size: 18px;
+  }
 }
 
 p {
@@ -80,6 +96,101 @@ p.small {
   font-family: "roboto-regular", sans-serif;
 }
 
+.d-inline {
+  display: inline !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.no-cap {
+  text-transform: none !important;
+}
+
+.cap {
+  text-transform: uppercase !important;
+}
+
+.bkgd-img {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.align-items-flex-start {
+  align-items: flex-start;
+}
+
+.align-items-unset {
+  align-items: unset;
+}
+
+.z-index-1 {
+  z-index: 1 !important;
+}
+
+.line-1 {
+  line-height: 1 !important;
+}
+
+.position-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn {
+  background: #141414;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "roboto-bold", sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 13px;
+  min-width: 125px;
+  display: inline-block;
+  letter-spacing: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 990px) {
+  .btn {
+    font-size: 14px;
+    min-width: 150px;
+    border: 1px solid #141414;
+    padding: 12px;
+  }
+
+  .btn:hover {
+    background: #fff;
+    color: #141414;
+  }
+}
+
 #shopify-section-announcement-bar p.announcement-bar__message {
   font-family: "roboto-bold", sans-serif;
   font-size: 11px;
@@ -93,6 +204,130 @@ p.small {
     font-size: 14px;
     padding: 1.6rem 2rem;
   }
+}
+
+.collection-hero {
+  height: 590px;
+}
+
+@media (min-width: 750px) {
+  .collection-hero {
+    height: 620px;
+  }
+}
+
+@media (min-width: 990px) {
+  .collection-hero {
+    height: 650px;
+  }
+}
+
+.collection-hero .bkgd-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+}
+
+@media (min-width: 750px) {
+  .collection-hero .bkgd-img {
+    height: 100%;
+  }
+}
+
+.collection-hero .mobile-bkgd {
+  display: block;
+}
+
+@media (min-width: 750px) {
+  .collection-hero .mobile-bkgd {
+    display: none;
+  }
+}
+
+.collection-hero .desktop-bkgd {
+  display: none;
+}
+
+@media (min-width: 750px) {
+  .collection-hero .desktop-bkgd {
+    display: block;
+  }
+}
+
+.collection-hero .mobile-box {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #D8D8D8;
+  top: 213px;
+  left: 50%;
+  padding: 25px 17px 13px;
+  text-align: center;
+  transform: translateX(-50%);
+  width: calc(100% - 30px);
+}
+
+@media (min-width: 750px) {
+  .collection-hero .mobile-box {
+    top: 245px;
+  }
+}
+
+@media (min-width: 990px) {
+  .collection-hero .mobile-box {
+    display: none;
+  }
+}
+
+.collection-hero h6 {
+  margin: 0 0 10px;
+  letter-spacing: 0.88px;
+}
+
+@media (min-width: 990px) {
+  .collection-hero h6 {
+    margin: 0 0 20px;
+  }
+}
+
+.collection-hero h1 {
+  margin: 0 0 25px;
+  letter-spacing: 1.7px;
+}
+
+@media (min-width: 990px) {
+  .collection-hero h1 {
+    margin: 0 0 40px;
+  }
+}
+
+.collection-hero .collection-buttons .btn {
+  margin: 0 8px 15px;
+}
+
+.collection-hero .desktop-box {
+  display: none;
+}
+
+@media (min-width: 990px) {
+  .collection-hero .desktop-box {
+    display: block;
+    height: 100%;
+  }
+
+  .collection-hero .desktop-box .box-holder {
+    height: 100%;
+  }
+}
+
+.collection-hero .desktop-box .inner-box {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 54%;
 }
 
 .header.page-width {
