@@ -184,6 +184,10 @@ p.small {
   }
 }
 
+footer.footer {
+  opacity: 0;
+}
+
 .btn {
   background: #141414;
   border: 0;
@@ -636,9 +640,22 @@ form.search .field__input:focus ~ .field__label {
   padding: 45px 0 0;
 }
 
+@media (min-width: 990px) {
+  .icon-blocks {
+    border-top: 1px solid #979797;
+    border-bottom: 1px solid #979797;
+  }
+}
+
 @media (min-width: 750px) {
   .icon-blocks .grid {
     align-items: flex-end;
+  }
+}
+
+@media (min-width: 990px) {
+  .icon-blocks .grid {
+    margin-bottom: 0;
   }
 }
 

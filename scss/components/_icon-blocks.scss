@@ -5,9 +5,16 @@
     background: linear-gradient(45deg,  rgba(250,251,251,1) 0%,rgba(247,248,248,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafbfb', endColorstr='#f7f8f8',GradientType=1 );
     padding: 45px 0 0;
+    @include lg{
+        border-top: 1px solid #979797;
+        border-bottom: 1px solid #979797;
+    }
     .grid{
         @include md{
             align-items: flex-end;
+        }
+        @include lg{
+            margin-bottom: 0;
         }
     }
     .full-mobile{
