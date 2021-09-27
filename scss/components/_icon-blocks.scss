@@ -1,0 +1,30 @@
+.icon-blocks{
+    background: rgb(250,251,251);
+    background: -moz-linear-gradient(45deg,  rgba(250,251,251,1) 0%, rgba(247,248,248,1) 100%);
+    background: -webkit-linear-gradient(45deg,  rgba(250,251,251,1) 0%,rgba(247,248,248,1) 100%);
+    background: linear-gradient(45deg,  rgba(250,251,251,1) 0%,rgba(247,248,248,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafbfb', endColorstr='#f7f8f8',GradientType=1 );
+    padding: 45px 0 0;
+    .grid{
+        @include md{
+            align-items: flex-end;
+        }
+    }
+    .full-mobile{
+        max-width: 100%;
+        width: 100%;
+        @include md{
+            max-width: 50%;
+            width: calc(33.33% - .5rem * 2 / 3);
+        }
+    }
+    .icon-block{
+        padding: 0 90px 45px;
+        @include md{
+            padding: 0 25px 40px;
+        }
+        h5{
+            margin: 10px 0 0;
+        }
+    }
+}

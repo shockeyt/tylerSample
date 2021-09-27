@@ -1,0 +1,132 @@
+<section id="section-{{ section.id }}" class="two-by-two-images position-relative" data-section-id="{{ section.id }}" data-section-type="collection">
+  <div class="page-width no-padding-mobile">
+    <div class="grid grid--2-col">
+        <div class="grid__item full-mobile position-relative">
+            <div class="position-relative">
+                <div class="bkgd-img" style="background-image:url({{ section.settings.left_image | img_url: '1000x' }});"></div>
+                <div class="text-box">
+                    {%- unless section.settings.left_title == blank -%}
+                        <h4 class="cap text-black">{{ section.settings.left_title }}</h4>
+                    {%- endunless -%}
+                    {%- unless section.settings.left_text == blank -%}
+                        <p class="text-black">{{ section.settings.left_text }}</p>
+                    {%- endunless -%}
+                    <div class="collection-links">
+                        {%- for block in section.blocks -%}
+                            {%- if block.type == 'left_collection' -%}
+                                <a href="/collections/{{ block.settings.left_collection }}" class="">{{ block.settings.left_collection_title }}</a>
+                            {%- endif -%}
+                        {%- endfor -%}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid__item full-mobile position-relative">
+            <div class="position-relative">
+                <div class="bkgd-img" style="background-image:url({{ section.settings.right_image | img_url: '1000x' }});"></div>
+                <div class="text-box">
+                    {%- unless section.settings.right_title == blank -%}
+                        <h4 class="cap text-black">{{ section.settings.right_title }}</h4>
+                    {%- endunless -%}
+                    {%- unless section.settings.right_text == blank -%}
+                        <p class="text-black">{{ section.settings.right_text }}</p>
+                    {%- endunless -%}
+                    <div class="collection-links">
+                        {%- for block in section.blocks -%}
+                            {%- if block.type == 'right_collection' -%}
+                                <a href="/collections/{{ block.settings.right_collection }}" class="">{{ block.settings.right_collection_title }}</a>
+                            {%- endif -%}
+                        {%- endfor -%}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "2x2 Image Collections",
+  "class": "shopify-section--collection-hero",
+  "settings": [
+    {
+        "type": "image_picker",
+        "id": "left_image",
+        "label": "Left Image"
+    }, 
+    {
+        "type": "text",
+        "id": "left_title",
+        "label": "Left Title",
+        "default": "Left Title"
+    },
+    {
+        "type": "text",
+        "id": "left_text",
+        "label": "Left Description",
+        "default": "Left Description"
+    },
+    {
+        "type": "image_picker",
+        "id": "right_image",
+        "label": "Right Image"
+    }, 
+    {
+        "type": "text",
+        "id": "right_title",
+        "label": "Right Title",
+        "default": "Right Title"
+    },
+    {
+        "type": "text",
+        "id": "right_text",
+        "label": "Right Description",
+        "default": "Right Description"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "left_collection",
+      "name": "Left Collection Link",
+      "settings": [
+            {
+                "type": "text",
+                "id": "left_collection_title",
+                "label": "Collection title",
+                "default": "Collection title"
+            },
+            {
+                "type": "collection",
+                "id": "left_collection",
+                "label": "Collection"
+            }
+      ]
+    },
+    {
+      "type": "right_collection",
+      "name": "Right Collection Link",
+      "settings": [
+            {
+                "type": "text",
+                "id": "right_collection_title",
+                "label": "Collection title",
+                "default": "Collection title"
+            },
+            {
+                "type": "collection",
+                "id": "right_collection",
+                "label": "Collection"
+            }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Custom",
+      "name": "2x2 Image Collections",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

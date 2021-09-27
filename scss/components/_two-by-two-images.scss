@@ -1,0 +1,90 @@
+.two-by-two-images{
+    @include md{
+        margin-bottom: 55px;
+    }
+    .full-mobile{
+        width: 100%;
+        max-width: 100%;
+        @include md{
+            width: calc(50% - 1rem / 2);
+            max-width: 50%;
+        }
+    }
+    .bkgd-img{
+        display: block;
+        height: 320px;
+        @include md{
+            height: 550px;
+            margin: 0 10px;
+        }
+        @include lg{
+            height: 650px;
+        }
+    }
+    .text-box{
+        background: #fff;
+        padding: 30px 35px 55px;
+        text-align: center;
+        @include md{
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 85%;
+        }
+        @include lg{
+            bottom: 30px;
+            padding: 40px 55px 55px;
+            width: calc(100% - 80px);
+        }
+        h4{
+            margin: 0 0 10px;
+            @include lg{
+                margin: 0 0 20px;
+            }
+        }
+        p{
+            margin: 0 auto 25px;
+            max-width: 215px;
+            @include lg{
+                max-width: none;
+            }
+        }
+        a{
+            color: $black;
+            display: inline-block;
+            font-family: $roboto_bold;
+            font-size: 14px;
+            letter-spacing: 2px;
+            line-height: 1;
+            padding: 0 15px;
+            position: relative;
+            text-decoration: underline;
+            text-transform: uppercase;
+            transition: color 0.3s;
+            @include lg{
+                padding: 0 20px;
+                &:hover{
+                    color: $blue;
+                }
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 2px;
+                background: $black;
+                @include lg{
+                    width: 1px;
+                }
+            }
+            &:last-of-type{
+                &:after{
+                    display: none;
+                }
+            }
+        }
+    }
+}

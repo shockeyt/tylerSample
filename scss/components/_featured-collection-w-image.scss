@@ -1,6 +1,7 @@
 .featured-collection-w-image{
     @include md{
         height: 550px;
+        margin-bottom: 55px;
     }
     @include lg{
         height: 650px;
@@ -16,21 +17,15 @@
             width: 70%;
         }
         @include lg{
-            width: 60%;
+            //width: 60%;
         }
     }
     .text-box{
-        //position: absolute;
         background: #fff;
-        
-        //top: 213px;
-        //left: 50%;
         margin-right: 10px;
         margin-top: -60px;
         padding: 20px;
         text-align: left;
-        //transform: translateX(-50%);
-        //width: calc(100% - 30px);
         @include md{
             position: absolute;
             top: 135px;
@@ -40,6 +35,7 @@
             margin: 0;
             padding: 30px;
             top: 100px;
+            left: 100px;
         }
         .inner-box{
             border: 1px solid #D8D8D8;

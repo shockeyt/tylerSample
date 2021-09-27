@@ -6,8 +6,6 @@
         }
         @include lg{
             padding: 4rem 5rem;
-            //padding-top: 4rem;
-            //padding-bottom: 4rem;
         }
     }
     
@@ -35,7 +33,7 @@
     }
     @include lg{
         min-width: 119px;
-        width: 100%;
+        width: 219px;
     }
 }
 .header__inline-menu{

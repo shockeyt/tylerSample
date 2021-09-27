@@ -3,19 +3,19 @@
     border: 0;
     border-radius: 5px;
     color: #fff;
+    display: inline-block;
     font-family: $roboto_bold;
     font-size: 12px;
+    letter-spacing: 2px;
+    min-width: 125px;
+    padding: 13px;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 13px;
-    min-width: 125px;
-    display: inline-block;
-    letter-spacing: 2px;
     transition: all 0.3s ease-in-out;
     @include lg{
+        border: 1px solid $black;
         font-size: 14px;
         min-width: 150px;
-        border: 1px solid $black;
         padding: 12px 20px;
         &:hover{
             background: #fff;

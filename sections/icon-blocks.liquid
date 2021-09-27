@@ -1,0 +1,54 @@
+<section id="section-{{ section.id }}" class="icon-blocks position-relative" data-section-id="{{ section.id }}" data-section-type="collection">
+    <div class="page-width">
+        <div class="grid grid--3-col">
+            {%- for block in section.blocks -%}
+                {%- if block.type == 'icon' -%}
+                    <div class="grid__item full-mobile">
+                        <div class="icon-block text-center">
+                            {%- if block.settings.icon -%}
+                                <img src="{{ block.settings.icon | img_url: '200x' }}" alt="{{ block.settings.icon.alt }}">
+                            {%- endif -%}
+                            {%- if block.settings.title -%}
+                            <h5 class="cap text-black">{{ block.settings.title }}</h5>
+                            {%- endif -%}
+                        </div>
+                    </div>
+                {%- endif -%}
+            {%- endfor -%}
+            
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Icon Blocks",
+  "class": "shopify-section--icon-blocks",
+  "blocks": [
+    {
+      "type": "icon",
+      "limit": 3,
+      "name": "Icon Block",
+      "settings": [
+            {
+                "type": "image_picker",
+                "id": "icon",
+                "label": "Icon"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Icon Title"
+            }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Custom",
+      "name": "Icon Blocks",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}
